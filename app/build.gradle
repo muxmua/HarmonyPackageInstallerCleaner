@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+}
+
+def buildTime = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date())
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new java.util.Properties()
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+}
+
+android {
+    namespace 'com.hook.packageinstaller'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.hook.packageinstaller"
+        minSdk 29
+        targetSdk 34
+        versionCode 2
+        versionName "1.0.2"
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            release {
+                storeFile rootProject.file(keystoreProperties["storeFile"])
+                storePassword keystoreProperties["storePassword"]
+                keyAlias keystoreProperties["keyAlias"]
+                keyPassword keystoreProperties["keyPassword"]
+                storeType keystoreProperties["storeType"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/AL2.0', 'META-INF/LGPL2.1']
+        }
+    }
+}
+
+dependencies {
+    compileOnly files('libs/api-82.jar')
+}

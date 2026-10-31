@@ -1,0 +1,2 @@
+-keep class com.hook.packageinstaller.HookEntry { *; }
+-keep class com.hook.packageinstaller.** { *; }

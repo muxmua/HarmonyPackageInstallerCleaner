@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">鸿蒙应用安装器净化</string>
+    <string name="xposed_description">净化 HarmonyOS 应用安装器：跳过广告、商店推荐、身份验证和风险检测，并修复旋转锁定问题。</string>
+    <string name="settings_title">安装器净化</string>
+    <string name="module_subtitle">HarmonyOS PackageInstaller · 纯净安装环境</string>
+    <string name="author_format">作者 %1$s</string>
+    <string name="author_name">MuxMu</string>
+    <string name="settings_hint">修改开关后，点击“重启安装器”让配置生效；安装器未运行时无需重启。</string>
+    <string name="installer_version_format">安装器：%1$s (%2$d)</string>
+    <string name="installer_version_unknown">安装器版本：未检测到</string>
+    <string name="current_installer">当前安装器</string>
+    <string name="scope_label">作用域</string>
+    <string name="scope_value">com.android.packageinstaller</string>
+    <string name="restart_scope">重启安装器</string>
+    <string name="restart_scope_desc">修改开关后点击，安装器下次启动时重新加载 Hook。</string>
+    <string name="restart_sent">已发送重启请求。下次安装应用时生效。</string>
+    <string name="section_features">净化功能</string>
+    <string name="section_features_desc">每项功能独立开关</string>
+    <string name="section_other">其他设置</string>
+    <string name="section_other_desc">模块自身行为</string>
+    <string name="all_on">全部开启</string>
+    <string name="all_off">全部关闭</string>
+    <string name="hide_launcher">隐藏桌面图标</string>
+    <string name="hide_launcher_desc">隐藏后可通过LSP管理器中进入</string>
+    <string name="hide_launcher_warning">隐藏后桌面图标会消失，可通过LSP管理器中进入</string>
+    <string name="hide_launcher_confirm">隐藏</string>
+    <string name="hide_launcher_hidden">桌面图标已隐藏</string>
+    <string name="hide_launcher_shown">桌面图标已恢复</string>
+    <string name="hidden_icon_notification_title">安装器净化 · 桌面图标已隐藏</string>
+    <string name="hidden_icon_notification_text">点此打开模块设置，或关闭“隐藏桌面图标”。</string>
+    <string name="notification_channel_name">模块状态</string>
+    <string name="notification_channel_desc">隐藏桌面图标时保留一个打开设置的入口</string>
+    <string name="footer">MuxMu · HarmonyOS PackageInstaller Cleaner</string>
+
+    <string name="feature_ad">广告净化</string>
+    <string name="feature_ad_desc">安装前与安装后的广告</string>
+    <string name="feature_store">商店推荐净化</string>
+    <string name="feature_store_desc">应用市场详情跳转、官方安装按钮、推荐卡片</string>
+    <string name="feature_auth">身份验证跳过</string>
+    <string name="feature_auth_desc">跳过指纹/人脸/PIN/账号校验</string>
+    <string name="feature_risk">风险检测跳过</string>
+    <string name="feature_risk_desc">本地/在线风险检测</string>
+    <string name="feature_risk_ui">风险文字和危险图标清理</string>
+    <string name="feature_risk_ui_desc">隐藏风险标题、风险说明、危险图标和纯净模式推广</string>
+    <string name="feature_pure">纯净模式拦截跳过</string>
+    <string name="feature_pure_desc">纯净模式豁免、密码验证拦截、纯净模式推广</string>
+    <string name="feature_unknown">未知来源限制跳过</string>
+    <string name="feature_unknown_desc">跳过外部未知来源的限制弹窗</string>
+    <string name="feature_anonymous">匿名来源弹窗跳过</string>
+    <string name="feature_anonymous_desc">来历不明来源提示、外部来源“不再询问”</string>
+    <string name="feature_promo">推广 UI 清理</string>
+    <string name="feature_promo_desc">找相似应用、官方安装、纯净模式入口</string>
+    <string name="feature_orientation">修复旋转锁定</string>
+    <string name="feature_orientation_desc">系统已锁旋转时，不再跟随传感器旋转</string>
+</resources>
