@@ -34,7 +34,6 @@
 DBY-W09
 PackageInstaller 13.3.1.302 / 1303001302
 Android 12 (API 31)
-ro.build.characteristics=tablet
 ```
 
 
